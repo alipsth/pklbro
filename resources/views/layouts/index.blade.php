@@ -44,6 +44,7 @@
   <div class="main-content" id="panel">
   <div class="content-header">
   @yield('content')
+  
   <div class="container-fluid">
   </div>
   </div>

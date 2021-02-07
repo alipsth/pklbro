@@ -57,8 +57,8 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
             'strict' => true,
-            'models' =>[
-                //'ONLY_FULL_GROUP_BY, // Disable thus to allow groupby
+            'modes' => [
+                //'ONLY_FULL_GROUP_BY', // Disable this to allow grouping by one column
                 'STRICT_TRANS_TABLES',
                 'NO_ZERO_IN_DATE',
                 'NO_ZERO_DATE',
