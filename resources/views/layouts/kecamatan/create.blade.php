@@ -13,7 +13,12 @@
                     <div class="form-group">
                     <div class="mb-12>
                         <label for="exampleInputPassword1" class="form-label"><b>Kode Kecamatan</b></label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" name="kode_kecamatan">
+                        <input type="text" class="form-control @error('kode_kecamatan') is-invalid @enderror" id="exampleInputPassword1" name="kode_kecamatan">
+                        @error ('kode_kecamatan')
+                        <span class="invalid-feedback" role="alert">
+                        <strong>{{$message}}</strong>
+                        </span>
+                        @enderror
                     </div>
                      <div class="form-group">
                         <label for="">Kota</label>
@@ -26,7 +31,12 @@
                       <div class="form-group">
                     <div class="mb-12>
                         <label for="exampleInputPassword1" class="form-label"><b>Nama Kecamatan</b></label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" name="nama_kecamatan">
+                        <input type="text" class="form-control @error('nama_kecamatan') is-invalid @enderror" id="exampleInputPassword1" name="nama_kecamatan">
+                        @error ('nama_kecamatan')
+                        <span class="invalid-feedback" role="alert">
+                        <strong>{{$message}}</strong>
+                        </span>
+                        @enderror
                     </div>
                      </div>
                     <div class="form-group">

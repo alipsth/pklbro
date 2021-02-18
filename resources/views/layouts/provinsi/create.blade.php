@@ -13,13 +13,24 @@
                    <div class="form-group">
                     <div class="mb-12">
                         <label for="exampleInputEmail1" class="form-label">Kode Provinsi</label>
-                        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="kd_prov">
+                        <input type="number" class="form-control @error('kode_provinsi') is-invalid @enderror" 
+                        id="exampleInputEmail1" aria-describedby="emailHelp" name="kode_provinsi">
+                        @error ('kode_provinsi')
+                        <span class="invalid-feedback" role="alert">
+                        <strong>{{$message}}</strong>
+                        </span>
+                        @enderror
                     </div>
                      </div>
                       <div class="form-group">
                     <div class="mb-12>
                         <label for="exampleInputPassword1" class="form-label">Provinsi</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" name="nm_prov">
+                        <input type="text" class="form-control @error('nama_provinsi') is-invalid @enderror" id="exampleInputPassword1" name="nama_provinsi">
+                        @error ('nama_provinsi')
+                        <span class="invalid-feedback" role="alert">
+                        <strong>{{$message}}</strong>
+                        </span>
+                        @enderror
                     </div>
                      </div>
                     <div class="form-group">

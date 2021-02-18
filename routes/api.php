@@ -39,6 +39,7 @@ Route::get('/all',[ApiController::class,'Seluruh']);
 Route::get('/pos',[ApiController::class,'positif']);
 Route::get('/sem',[ApiController::class,'sembuh']);
 Route::get('/men',[ApiController::class,'meninggal']);
+Route::get('/dunya',[ApiController::class,'dunya']);
 // Route::post('/api/store',[ApiController::class,'store']);
 // Route::get('/api/{id?}',[ApiController::class,'show']);
 // Route::post('/api/update/{id?}',[ApiController::class,'update']);

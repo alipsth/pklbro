@@ -2,7 +2,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,10 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('fronindex');
+});
+Route::get('oba', function () {
+    return view('coba');
 });
 
-Route::get('das', function () {
+// frondend route
+use App\Http\Controllers\FrontendController;
+Route::resource('/',FrontendController::class);
+
+Route::get('provinsi', function () {
     return view('layouts.index');
 });
 

@@ -241,4 +241,26 @@ class ApiController extends Controller
                     'message' => 'Berhasil'
                 ], 200);
     }
+
+    public function dunya()
+    {
+        $response = negarant::get('https://api.kawalcorona.com/')->json();
+        dd($response);
+        foreach ($response as $data =>$val){
+            $raw = $val['attribute'];
+            $res = [
+                'Negara' => $raw['Country Regio'],
+                'Positif' => $raw['Confirmed'],
+                'Sembuh' => $raw['Recovered'],
+                'Meninggal' => $raw['Deaths']
+            ];
+            array_push($this->data,$res);
+        }
+        $data =[
+            'Success' => true,
+            'Data' => $this->data,
+            'Message' => 'Berhasil'
+        ];
+        return response()->json($data,200);
+    }
 }

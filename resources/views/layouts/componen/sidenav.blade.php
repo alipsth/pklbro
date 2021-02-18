@@ -10,9 +10,6 @@
         <!-- Collapse -->
         <div class="collapse navbar-collapse" id="sidenav-collapse-main">
           <!-- Nav items -->
-          <div class="media-body  ml-2  d-none d-lg-block">
-                    <span  class="mb-0 text-sm  font-weight-bold"><a href="das">Dashboard</a></span>
-                  </div>
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
               <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -51,9 +48,13 @@
                   <span>Tracking</span>
                 </a>
                 <div class="dropdown-divider"></div>
-                <a href="home" class="dropdown-item">
+                <a href="{{ route('logout') }}" class="dropdown-item"onclick="event.preventDefault();
+                  document.getElementById('logout-form').submit();" class="nav-link">
                   <i class="ni ni-user-run"></i>
                   <span>Logout</span>
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                       @csrf
+                  </form>
                 </a>
               </div>
             </li>
