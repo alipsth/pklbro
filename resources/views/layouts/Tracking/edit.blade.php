@@ -14,9 +14,10 @@
                             <form action="{{route('tracking.update', $tracking->id)}}" class="form-horizontal m-t-30" method="post">
                             @csrf
                             @method('put')
+                            @livewireScripts
                             @livewire('tracking-data',['selectedRw' => $tracking->id_rw, 'idt' => $tracking->id])
                             <div class="form-group">
-                            <button type="submit" class="float-right btn btn-outline-primary">Edit</button>
+                            <button type="submit" class="float-right btn btn-outline-primary">Simpan</button>
                             </div>
                             </form>
                             </div>

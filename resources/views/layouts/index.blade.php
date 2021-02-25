@@ -29,7 +29,9 @@
   <!-- Icons -->
   <link rel="stylesheet" href="{{asset('assets/vendor/nucleo/css/nucleo.css')}}" type="text/css">
   <link rel="stylesheet" href="{{asset('assets/vendor/@fortawesome/fontawesome-free/css/all.min.css')}}" type="text/css">
-  <!-- Page plugins -->
+  <!-- Data Tables -->
+  <link rel="stylesheet" href="{{asset('assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">  
   <!-- Argon CSS -->
   <link rel="stylesheet" href="{{asset('assets/css/argon.css?v=1.2.0')}}" type="text/css">
   @yield('css')
@@ -54,6 +56,9 @@
   <!-- End Header -->
   
   <!-- Argon Scripts -->
+  <!-- Data Tables -->
+  <script src="{{asset('assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
+  <script src="{{asset('assets/plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
   <!-- Core -->
   <script src="{{asset('assets/vendor/jquery/dist/jquery.min.js')}}"></script>
   <script src="{{asset('assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
@@ -66,6 +71,7 @@
   <!-- Argon JS -->
   <script src="{{asset('assets/js/argon.js?v=1.2.0')}}"></script>
   @yield('js')
+  @stack('index')
 </body>
 
 </html>

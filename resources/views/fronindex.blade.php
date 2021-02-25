@@ -24,7 +24,9 @@
     <link rel="stylesheet" type="text/css" href="{{asset('assets/frondend/helium/css/extras.css')}}">
     <!-- Responsive Style -->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/frondend/helium/css/responsive.css')}}">
-
+    <!-- IcoFont -->
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/frondend/helium/css/icofont.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/frondend/helium/css/icofont.min.css')}}">
   </head>
   <body>
 
@@ -70,8 +72,8 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#contact">
-                  Contact
+                <a class="nav-link" href="#about">
+                  About
                 </a>
               </li>
             </ul>
@@ -81,6 +83,7 @@
       <!-- Navbar End -->
 
       <!-- sliders -->
+      <section>
       <div id="sliders">
         <div class="full-width">
           <!-- light slider -->
@@ -100,7 +103,7 @@
                     <div class="carousel-caption">
                             <h3 class="text-dark">Welcome to </h3> 
                             <h2 class="text-darks">TrangkingCovid-19</h2>
-                        </div> 
+                      </div> 
                 </div>
                   <div class="carousel-item">
                     <img src="{{asset('assets/frondend/helium/img/b.jpg')}}" alt="">
@@ -146,57 +149,68 @@
         </div>
       </div>
       <!-- End sliders -->
-    </header>
-    <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts">
-            <div class="container" data-aos="fade-up">
-
-        <div class="row">
-         
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <i class="icofont-plus"></i> <br>
-              <h5><p><b>Jumlah Positif Indonesia</b></p></h5>  
-              <span data-toggle="counter-up">{{ $positif }}</span>
-              <p>Orang</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-            <div class="count-box">
-              <i class="icofont-heart-beat-alt"></i> <br>
-              <h5><p><b>Jumlah Sembuh Indonesia</b></p></h5>
-              <span data-toggle="counter-up">{{ $sembuh }}</span>
-              <p>Orang</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="icofont-skull-danger"></i> <br>
-              <h5><p><b>Jumlah Meninggal Indonesia</b></p></h5>
-              <span data-toggle="counter-up">{{ $meninggal }}</span>
-              <p>Orang</p>
-            </div>
-          </div>
-         
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-             <i class="icofont-globe"></i><br>
-              <h5><p><b>Jumlah Total Positif di Dunia</b></p></h5>
-              <span data-toggle="counter-up"><?php echo $posglobal['value'] ?></span>
-              <p>Orang</p>
-            </div>
-          </div>
-          
-        </div><br><br>
-        
-        <div class="col text-center">
+    </header><br>
+    <div class="row">
+							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+								<div class="card bg-info img-card box-primary-shadow">
+									<div class="card-body">
+										<div class="d-flex">
+											<div class="text-white">
+												<p class="text-white mb-0"><b>Jumlah Positif Indonesia</b></p>
+												<h2 class="mb-0 number-font">{{$positif}}</h2>
+												<p class="text-white mb-0">ORANG</p>
+											</div>
+											<div class="ml-auto"> <img src="../uploads/sad-u6e.png" alt="Positif" width="50" height="50"> </div>
+										</div>
+									</div>
+								</div>
+							</div><!-- COL END -->
+							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+								<div class="card bg-success img-card box-secondary-shadow">
+									<div class="card-body">
+										<div class="d-flex">
+											<div class="text-white">
+                      <p class="text-white mb-0"><b>Jumlah Sembuh Indonesia</b></p>
+												<h2 class="mb-0 number-font">{{$sembuh}}</h2>
+												<p class="text-white mb-0">ORANG</p>
+											</div>
+											<div class="ml-auto"> <img src="../uploads/happy-ipM.png" alt="Positif" width="50" height="50"> </div>
+										</div>
+									</div>
+								</div>
+							</div><!-- COL END -->
+							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+								<div class="card  bg-danger img-card box-success-shadow">
+									<div class="card-body">
+										<div class="d-flex">
+											<div class="text-white">
+                      <p class="text-white mb-0"><b>Jumlah Meninggal Indonesia</b></p>
+                      <h2 class="mb-0 number-font">{{$meninggal}}</h2>
+												<p class="text-white mb-0">ORANG</p>
+											</div>
+											<div class="ml-auto"> <img src="../uploads/emoji-LWx.png" alt="Positif" width="50" height="50"> </div>
+										</div>
+									</div>
+								</div>
+							</div><!-- COL END -->
+							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+								<div class="card  bg-info img-card box-success-shadow">
+									<div class="card-body">
+										<div class="d-flex">
+											<div class="text-white">
+                      <p class="text-white mb-0"><b>Total Positif Dunia</b></p>
+                      <h2 class="mb-0 number-font"><?php echo $posglobal['value'] ?></h2>
+												<p class="text-white mb-0">ORANG</p>
+											</div>
+											<div class="ml-auto"> <img src="../uploads/emoji-LWx.png" alt="Positif" width="50" height="50"> </div>
+										</div>
+									</div>
+								</div>
+							</div><!-- COL END -->
+							<div class="col text-center">
             <h6><p>Update terakhir : {{ $tanggal }}</p></h6>
-        </div> 
-      </div>
-      </section>
-        <!-- End Counts Section -->
+        </div>
+						</div>
         <!-- Global  -->
         <section id="global" class="global">
                 <div class="global">
@@ -361,54 +375,43 @@
     <!-- Team Section End -->
 
 
-    <!-- Contact Form Section Start -->
-    <section id="contact" class="contact-form section-padding">
-      <div class="container">
+    <section id="about" class="about">
+      <div class="container-fluid">
+
         <div class="row">
-          <div class="col-md-12">
-            <h2 class="section-title wow fadeInDown animated" data-wow-delay="0.3s">Contact Us</h2>
+          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
+          <img src="{{asset('assets/frondend/helium/img/co.png')}}" alt="" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true">
           </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-8 col-md-6 col-xs-12">
-            <h3 class="title-head text-left">Get in touch</h3>
-            <form class="contact-form" data-toggle="validator" >
-              <div class="row">
-                <div class="col-lg-4 col-md-12 col-xs-12">
-                  <div class="form-group">
-                    <i class="contact-icon fa fa-user"></i>
-                    <input type="text" class="form-control" id="name" placeholder="Full Name" required data-error="Please enter your name">
-                    <div class="help-block with-errors"></div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-12 col-xs-12">
-                  <div class="form-group">
-                    <i class="contact-icon fa fa-envelope-o"></i>
-                    <input type="email" class="form-control" id="email" placeholder="Email" required data-error="Please enter your email">
-                    <div class="help-block with-errors"></div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-12 col-xs-12">
-                  <div class="form-group">
-                    <i class="contact-icon fa fa-pencil-square-o"></i>
-                    <input type="text" class="form-control" id="subject" placeholder="Subject" required data-error="Please enter your Subject">
-                    <div class="help-block with-errors"></div>
-                  </div>
-                </div>
-                <div class="col-lg-12 col-md-12 col-xs-12">
-                  <textarea class="form-control" id="message" rows="4" placeholder="Message" required data-error="Please enter your message"></textarea>
-                  <div class="help-block with-errors"></div>
-                  <button type="submit" id="form-submit" class="btn btn-common btn-form-submit">Send Message</button>
-                  <div id="msgSubmit" class="h3 text-center hidden"></div>
-                  <div class="clearfix"></div>
-                </div>
-              </div>
-            </form>
+
+          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+            <h3>Apa Itu Virus Korona</h3>
+            <p>Coronavirus adalah sekelompok virus RNA terkait yang menyebabkan penyakit pada mamalia dan burung.
+               Mereka menyebabkan infeksi saluran pernafasan yang dapat berkisar dari yang ringan sampai yang mematikan.
+               Penyakit ringan pada manusia termasuk beberapa kasus flu biasa (yang juga disebabkan oleh virus lain, terutama rhinovirus), sementara varietas yang lebih mematikan dapat menyebabkan SARS, MERS, dan COVID-19.
+               Pada sapi dan babi menyebabkan diare, sedangkan pada tikus menyebabkan hepatitis dan encephalomyelitis.</p>
+               <br>
+            <h3>Hal-hal yang wajib dilakukan!</h3>
+            <div class="icon-box">
+              <div class="icon"></div>
+              <h4 class="title"><a href="https://lifestyle.kompas.com/read/2020/06/14/114606220/terbukti-pakai-masker-jadi-cara-terbaik-cegah-infeksi-covid-19">Memakai Masker</a></h4>
+              <p class="description">Memakai masker wajah di tempat umum adalah cara yang paling efektif untuk mencegah penularan antar-manusia.</p>
+            </div>
+            <div class="icon-box">
+              <div class="icon"></div>
+              
+              <h4 class="title"><a href="https://www.kompas.com/sains/read/2020/04/01/170000123/cegah-penularan-virus-corona-jaga-jarak-minimal-dua-meter?page=all">Menjaga Jarak</a></h4>
+              <p class="description">Alasan kita perlu menjaga jarak adalah karena virus corona SARS-CoV-2,
+               mikroba yang bertanggung jawab pada terjadinya pandemi Covid-19 dapat menyebar di antara orang-orang yang berdekatan.</p>
+            </div>
+            <div class="icon-box">
+              <div class="icon"></div>
+              <h4 class="title"><a href="https://lifestyle.kompas.com/read/2020/08/21/182200620/ternyata-ini-rahasia-menjaga-kesehatan-di-masa-pandemi">Menjaga Kesehatan</a></h4>
+              <p class="description">Dengan perbanyak olahraga, tubuh akan menjadi lebih sehat dan segar. Perbanyak mengkonsumsi makanan seperti sayur-sayur dan buah.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- Contact Form Section End -->
       <!-- Copyright -->
       <div id="copyright">
         <div class="container">

@@ -28,7 +28,7 @@
                         Tambah data
                     </a>
 
-                    <table class="table">
+                    <table id="example2" class="table table-bordered table-striped">
                         <thead>
                             <th>No</th>
                             <th>Kode kota</th>
@@ -66,6 +66,13 @@
 </div>
 @endsection
 @section('js')
-
+<script>
+    $(function () {
+    $("#example").DataTable({
+      "responsive": true,
+      "autoWidth": false,
+    });
+    });
+</script>
 @endsection
 

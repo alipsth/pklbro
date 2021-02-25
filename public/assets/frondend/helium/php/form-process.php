@@ -32,7 +32,7 @@ if (empty($_POST["message"])) {
 }
 
 
-$EmailTo = "https://mail.google.com/mail/u/0/#inbox";
+$EmailTo = "alipsth9@gmail.com";
 $Subject = "New Message Received";
 
 // prepare email body text

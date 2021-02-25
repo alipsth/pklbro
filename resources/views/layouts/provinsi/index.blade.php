@@ -24,7 +24,7 @@
                         Tambah data
                     </a>
 
-                    <table class="table">
+                    <table id="example1" class="table table-bordered table-striped">
                         <thead>
                             <th>No</th>
                             <th>Kode Provinsi</th>
@@ -62,6 +62,14 @@
 @section('css')
 
 @endsection
+<script>
+    $(function () {
+    $("#example1").DataTable({
+      "responsive": true,
+      "autoWidth": false,
+    });
+    });
+</script>
 @section('js')
 
 @endsection

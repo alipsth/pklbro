@@ -59,7 +59,6 @@
                                             <form action="{{route('tracking.destroy',$data->id)}}"  method="POST">
                                             @csrf
                                             @method('DELETE')
-                                            <center>  <a href="{{route('tracking.show',$data->id)}}" class="btn btn-outline-success btn-sm"><i class="fa fa-eye"></a></i>
                                     <a href="{{route('tracking.edit',$data->id)}}" class="btn btn-outline-primary btn-sm"><i class="fa fa-edit"></a></i>
                                     <button type="submit"  class="btn btn-outline-danger btn-sm" onclick="return confirm('Yakin Hapus?')"><i class="fa fa-trash-alt">
                                             </form>
@@ -75,6 +74,15 @@
 </div>
 </div>
 @endsection
-
+@push('index')
+<script>
+    $(function () {
+    $("#example1").DataTable({
+      "responsive": true,
+      "autoWidth": false,
+    });
+    });
+</script>
+@endpush
 @section('js')
 @endsection

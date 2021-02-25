@@ -16,9 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('fronindex');
 });
+
 Route::get('oba', function () {
     return view('coba');
 });
+
 
 // frondend route
 use App\Http\Controllers\FrontendController;
